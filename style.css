@@ -69,13 +69,25 @@ body {
 }
 
 .box {
-  background-image: url("https://i.giphy.com/media/l0EwXVZspYdjkXh1S/giphy.webp");
   background-repeat: no-repeat;
   background-size: 333.33px 333.33px;
   position: relative;
   height: 83.33px;
   width: 83.33px;
-  transition: 0.4s ease;
+  transition: 1s ease;
+  animation-name: apear;
+  animation-duration: 1.5s;
+}
+
+@keyframes apear {
+  from {
+    filter: blur(4px) saturate(0);
+    transform: scale(1.05);
+  }
+  to {
+    filter: blur(0) saturate(1);
+    transform: scale(1);
+  }
 }
 
 .box::after {
